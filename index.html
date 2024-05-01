@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f4523bed7d.js" crossorigin="anonymous"></script>
+    <title>My To Do</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="navContainer">
+            <i class="fa-solid fa-list"></i>
+            <h1>My To Do</h1>
+        </div>
+        <div class="contentContainer">
+            <div class="sideBar">
+                <div class="barItems">
+                    <div class="allTasks tasks" value="All Tasks">
+                        <i class="fa-solid fa-clipboard-list font"></i>
+                        <h2>All Tasks</h2>
+                        <span><em></em></span>
+                    </div>
+                    <div class="allTasks today" value="Today's Tasks">
+                        <i class="fa-solid fa-calendar-check font"></i>
+                        <h2>Today</h2>
+                        <span><em></em></span>
+                    </div>
+                    <div class="allTasks complete" value="Completed Tasks">
+                        <i class="fa-solid fa-circle-check font"></i>
+                        <h2>Completed Tasks</h2>
+                        <span><em></em></span>
+                    </div>
+                    <div class="allTasks uncomplete" value="Uncompleted Tasks">
+                        <i class="fa-solid fa-circle-xmark font"></i>
+                        <h2>Uncompleted Tasks</h2>
+                        <span><em></em></span>
+                    </div>
+                </div>
+                <div class="barSettings">
+                    <h1 class="title">Projects:</h1>
+                    <div class="projectEntries"></div>
+                    <input type="text" class="entry" name="projectTitle" placeholder="New Project">
+                    <span class="projectEntryIcon"><i class="fa-solid fa-plus"></i></span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="projectTitle">All Tasks</div>
+                <div class="taskInfo">
+                    <h1>There are no tasks for you currently.</h1>
+                    <h2>You can add a new task by clicking on the button below and filling in the form.</h2>
+                </div>
+                <button class="taskAdder">New Task</button>
+                <dialog id="taskDialog">
+                    <form id="taskForm">
+                        <div class="div1">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" id="title" required>
+                        </div>
+                        <div class="div2">
+                            <label for="date">Date</label>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                        <div class="div3">
+                            <textarea name="description" id="taskDescription" cols="30" rows="5" placeholder="Description..."></textarea>
+                        </div>
+                        <div class="div4">
+                            <label for="prioritySelection">Select your priority</label>
+                            <select name="tasksPriority" id="prioritySelection">
+                                <legend></legend>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                        <button class="sbt">Submit</button>
+                    </form>
+                </dialog>
+            </div>
+        </div>
+    </div>
+<script defer src="main.bundle.js"></script></body>
+</html>
