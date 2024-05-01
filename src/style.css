@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Container Styling */
+.mainContainer {
+    background: linear-gradient(135deg, #153677, #4e085f);
+    display: grid;
+    grid-template: 100px 1fr / 1fr;
+}
+
+/* Navigation Pane Styling */
+.navContainer {
+    grid-row: 1 / 2;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    box-shadow: 3px 3px 6px black;
+    z-index: 1;
+}
+
+.navContainer i {
+    font-size: 65px;
+    margin-top: 15px;
+}
+
+.navContainer h1 {
+    margin-top: 0;
+    margin-left: 5px;
+}
+
+.font {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.allTasks,
+.navContainer {
+    display: flex;
+}
+
+/* Content Container Containing Both The Sidebar and Content for Displaying Tasks Styling*/
+.contentContainer {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template: 1fr / 300px 1fr;
+}
+
+/* Sidebar Styling */
+.sideBar {
+    height: 100%;
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template: 300px 600px / 1fr;
+    box-shadow: 3px 3px 6px black;
+    background: rgb(146, 139, 130);
+}
+
+.barItems {
+    grid-row: 1/2;
+    margin: 10px;
+}
+
+.barSettings {
+    grid-row: 2/3;
+    margin: 10px;
+}
+
+.allTasks ~ {
+    margin: 10px;
+}
+
+.allTasks:hover,
+.hover {
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.entry {
+    background: rgb(146, 139, 130);
+    font-size: 16px;
+    color: black;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    outline: none;
+}
+
+/* Content Styling */
+.content {
+    grid-column: 2 / 3;
+}
+
+.taskInfo,
+.projectTitle {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projectTitle {
+    margin: 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.reset,
+.taskAdder,
+.others {
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    /* border-style: none; */
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px black;
+    cursor: pointer;
+}
+
+.projectEntryIcon {
+    background-color: rgb(141, 204, 247);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Dialog design */
+dialog {
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 10px;
+    height: 300px;
+}
+
+form {
+    display: grid;
+    grid-template: repeat(4, 50px) 70px / 1fr;
+}
+
+.div1 {
+    grid-row: 1/2;
+}
+
+.div2 {
+    grid-row: 2/3;
+}
+
+.div3 {
+    grid-row: 3/4;
+}
+
+.div4 {
+    grid-row: 4/5;
+    margin-top: 50px;
+}
+
+.sbt {
+    grid-row: 5/6;
+    margin: 0 auto;
+    border-radius: 10px;
+    border-style: none;
+    background-color: white;
+    color: black;
+    box-shadow: 3px 3px 6px white;
+    margin-top: 40px;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+    font-weight: bold;
+}
